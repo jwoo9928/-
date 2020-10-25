@@ -1,13 +1,19 @@
 #include <iostream>
 class SetValue {
-public:
+private:
 	int x, y;
-
-	void x_value(int a) {
-		x = a;
+public:
+	void x_value(int x) {
+		this->x = x;
 	}
-	void y_value(int b) {
-		y = b;
+	void y_value(int y) {
+		this->y = y;
+	}
+	int get_x() {
+		return x;
+	}
+	int get_y() {
+		return y;
 	}
 };
 
@@ -16,6 +22,6 @@ int main() {
 	obj.x_value(33);
 	obj.y_value(44);
 
-	std::cout << "X = " << obj.x << " ,Y = " << obj.y << std::endl;
+	std::cout << "X = " << obj.get_x() << " ,Y = " << obj.get_y() << std::endl;
 	return 0;
 }

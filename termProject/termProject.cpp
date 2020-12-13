@@ -284,7 +284,7 @@ int main() {
         edit->setCommand(new search_command(book));
         edit->setCommand(new save_command(book));
 		getAllWord(file, book->getWords());
-        while(input != 'e') {
+        while(1) {
             if(input == 'n') edit->commandInput(0);
             else if(input == 'p') edit->commandInput(1);
             else if(input == 'i') edit->commandInput(2);
@@ -300,5 +300,4 @@ int main() {
 			book->cmd = inputSelect(&input);
         }
     }
-
 }

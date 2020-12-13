@@ -242,6 +242,7 @@ vector<string> inputSelect(char *in) {
 	string a;
 	vector<string> cmd;
 	while(1) {
+		cout << "입력 : ";
 		cin >> commend;
 		input = commend.at(0);
 		if (input == 'n' || input == 'p' || input == 't')

@@ -233,7 +233,7 @@ void getAllWord(ifstream& file, vector<string> *pages) {
 		getline(file, str, ' ');
 		pages->push_back(str);
 
-	}cout << "finish" << endl;
+	}
 	//단어를 전부 받은뒤 75자 20줄이 되도록 출력
 	//그후 삽입은 vector의 index접근으로 단어 삽입
 	//다음페이지 이전페이지 단어수 글자수로 조작
@@ -244,7 +244,6 @@ vector<string> inputSelect(char *in) {
 	string commend;
 	string a;
 	vector<string> cmd;
-	cout << a << endl;
 	while(1) {
 		cin >> commend;
 		input = commend.at(0);

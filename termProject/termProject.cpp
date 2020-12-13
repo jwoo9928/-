@@ -87,7 +87,6 @@ class before_command : public Command {
 				cout << "This is the first Page!!" << "  "<< beforePage << endl;
 			else {
 				book->index = book->getPage()->at(beforePage).at(0);
-				cout << book->index << endl;
 				vector<int> page = showPage(book,&book->index);
 				book->getPage()->at(beforePage) = page;
 				book->currentPage = beforePage;

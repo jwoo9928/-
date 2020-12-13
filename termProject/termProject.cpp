@@ -114,7 +114,6 @@ class insert_command : public Command {
 				cout << "It doesn`t exist!! Try again!!" << endl;
 				return ;
 			}
-			cout << book->getWords()->at(page[line]+word)<< endl;
 			book->getWords()->insert(book->getWords()->begin()+page[line]+word+1,book->cmd[2]);
 			book->index = book->getPage()->at(book->currentPage).at(0);
 			book->getPage()->at(book->currentPage) = showPage(book,&book->index);
@@ -142,7 +141,6 @@ class delete_command : public Command {
 				cout << "It doesn`t exist!! Try again!!" << endl;
 				return ;
 			}
-			cout << book->getWords()->at(page[line]+word)<< endl;
 			book->getWords()->erase(book->getWords()->begin()+page[line]+word);
 			book->index = book->getPage()->at(book->currentPage).at(0);
 			book->getPage()->at(book->currentPage) = showPage(book,&book->index);
